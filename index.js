@@ -22,7 +22,6 @@ axios(URL)
 
             if(title.length != 0 && url.length != 0){
                 articles.push({
-                    length,
                     title,
                     category,
                     url,
