@@ -3,9 +3,9 @@ const PORT = 8000
 const axios = require('axios')
 const cheerio = require('cheerio')
 const { response } = require('express')
-const express = require('express')
+// const express = require('express')
 
-const app = express()
+// const app = express()
 const URL = 'https://www.thestar.com/'
 
 axios(URL)
@@ -28,7 +28,7 @@ axios(URL)
             })
         })
         console.log(articles)
-    })
+    }).catch(err => console.log(err))
 
-app.listen(PORT, () => console.log(`server is running on PORT ${PORT}`))
+// app.listen(PORT, () => console.log(`server is running on PORT ${PORT}`))
 
