@@ -17,15 +17,19 @@ axios(URL)
         $('a', html).each(function() {
             const title = $(this).find('h3').text()
             const category = $(this).find('.c-mediacard-labels').text()
-            const time = $(this).find('.c-mediacard-footer').text()
+            const when = $(this).find('.c-mediacard-footer').text()
             const url = URL + $(this).attr('href')
 
-            articles.push({
-                title,
-                category,
-                url,
-                time
-            })
+            if(title.length != 0 && url.length != 0){
+                articles.push({
+                    length,
+                    title,
+                    category,
+                    url,
+                    when
+                })
+            }
+
         })
         console.log(articles)
     }).catch(err => console.log(err))
